@@ -1,28 +1,69 @@
 <template>
-    <div className="home-container">
+  <div>
+  <div class="carousel-container">
+    <q-carousel
+        animated
+        v-model="slide"
+        arrows
+        navigation
+        infinite
+      >
+        <q-carousel-slide :name="1" img-src="~assets/men.jpg"  />
+        <q-carousel-slide :name="2" img-src="~assets/women.jpg"  />
+       
+      </q-carousel>
+
+    </div>
+     
+    <div className="home-container ">
+    
         <div className="home-content">
+          
           <h1 className="home-heading">Treat Your Self</h1>
           <img
             src="~assets/shopp.jpg"
             alt="clothes that get you noticed"
             className="home-mobile-img"
           />
-          <p className="home-description">
-            Life isn't perfect but your outfit can be.Clothes are just like a friends you want quality not quantity.Get the best offers in the quality products.
-            So,celebrate the seasons new and exciting fashion in your own way.
+ 
+         <p className="home-description">
+          Life isn't perfect but your outfit can be.Clothes are just like a friends, 
+          you want quality not quantity.Get the best offers in the quality products.
+          So,celebrate the seasons new and exciting fashion in your own way.
 
 
-          </p>
-          <q-btn color="black" text-color="white" label="Shop Now" class="shop-now-button" @click="$router.replace('/Product')"/>  
+         </p>
+         <q-btn color="black" text-color="white" label="Shop Now" class="shop-now-button" @click="$router.replace('/Product')"/>  
+ 
+          
         </div>
-        <img
-        src="~assets/shopp.jpg"
-          alt="clothes that get you noticed"
-          className="home-desktop-img"
-        />
-      </div>
+          <img
+          src="~assets/shopp.jpg"
+            alt="clothes that get you noticed"
+            className="home-desktop-img"
+          />
+    </div>
+  </div>
 </template>
-<style>
+<script>
+ import { ref } from 'vue'
+
+export default {
+  setup () {
+    return {
+      slide: ref(1)
+    }
+  }
+}
+</script>
+<style scoped>
+.carousel-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:10px;
+}
+
 .home-container {
   display: flex;
   flex-direction: column;

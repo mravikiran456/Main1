@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header elevated class="bg-white text-black " height-hint="98">
+    <q-header bordered class="bg-white text-black " height-hint="98">
      <div class="pages-container">
       <q-toolbar>
         <q-toolbar-title>
@@ -9,14 +9,13 @@
        
         <q-tabs align="center" >
          
-          <q-route-tab to="/Home" label="Home" />
+          <q-route-tab to="/Home" label="Home" @click="visible=!visible" />
           <q-route-tab to="/Product" label="Product" />
           <q-route-tab to="/Cart" label="Cart" />
        
           <div class="logout">
-      <q-btn color="black" text-color="white" label="Logout"  @click="$router.replace('/Login')"/>  
-    
-    </div>
+             <q-btn color="black" text-color="white" label="Logout"  @click="$router.replace('/Login')"/>  
+           </div>
 
         </q-tabs>
       
@@ -27,10 +26,8 @@
     </q-header>
 
     <q-page-container>
-         
-          <router-view />
-   
- 
+         <transition name="router-anim" enter-active-class="animated fadeInDown" leave-active-class="fadeOutDown"> <router-view /></transition>
+        
     </q-page-container>
 
   </q-layout>
@@ -39,8 +36,9 @@
   
 </script>
 <style scoped>
+  @import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
   img{
-   max-width: 50%;
+   max-width:30%;
    padding: 10px;
   }
 .pages-container{
@@ -51,20 +49,6 @@
  
  margin-left: 20px;
 }
-.page{
-  width: 100%;
-  max-width: 768px;
-  padding: 15px;
-  box-sizing: border-box;
-}
-.view-enter-active,.view-leave-active{
-  transition: opacity 0.5s ease-in-out,transform 0.5s ease;
-}
-.view-enter,.view-leave-to{
-  opacity: 0;
-}
-.view-enter-to,.view-leave{
- opacity: 1;
- transform: translate(0px); 
-}
+
+
 </style>
