@@ -8,8 +8,8 @@
         navigation
         infinite
       >
-        <q-carousel-slide :name="1" img-src="~assets/men.jpg"  />
-        <q-carousel-slide :name="2" img-src="~assets/women.jpg"  />
+        <q-carousel-slide :name="1" img-src="https://res.cloudinary.com/ravikiran143/image/upload/v1640928098/men_cqli0i.jpg"  />
+        <q-carousel-slide :name="2" img-src="https://res.cloudinary.com/ravikiran143/image/upload/v1640928099/women_hht8ru.jpg"  />
        
       </q-carousel>
 
@@ -21,7 +21,7 @@
           
           <h1 className="home-heading">Treat Your Self</h1>
           <img
-            src="~assets/shopp.jpg"
+            src="https://res.cloudinary.com/ravikiran143/image/upload/v1640928405/shopp_hjvg0v.jpg"
             alt="clothes that get you noticed"
             className="home-mobile-img"
           />

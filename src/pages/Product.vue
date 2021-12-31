@@ -1,54 +1,34 @@
 <template>
-     <div>
-     <q-card>
-          <q-tabs
-            v-model="tab"
-            dense
-            class="text-grey"
-            active-color="primary"
-            indicator-color="primary"
-            align="center"
-            narrow-indicator
-          >
-            <q-tab name="mails" label="Men" />
-            <q-tab name="alarms" label="Women" />
-            
-          </q-tabs>
-  
-          <q-separator />
-  
-          <q-tab-panels v-model="tab" animated>
-            <q-tab-panel name="mails">
-              <div class="text-h6">Men</div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </q-tab-panel>
-  
-            <q-tab-panel name="alarms">
-              <div class="text-h6">Women</div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </q-tab-panel>
-  
+    <div class="home-page-banner-section">
+        <div class="home-page-banner-text-container">
+            <p class="home-page-banner-title">Has just arrivied!</p>
+            <h1 class="home-page-banner-heading">Huge Summer Collection</h1>
+            <p class="home-page-banner-detail">Shirts, Top Wear, Bottom Wear & much more...</p>
            
-          </q-tab-panels>
-        </q-card>
-  
-       
-     
-     </div>
+            <HomeGenderFilter />
+        </div>
+        <div >
+            <img class="home-page-banner-image" src="https://res.cloudinary.com/ecomrce/image/upload/v1640855541/Home/01_bbpeqq.jpg" alt="banner-image" />
+        </div>  
+    </div>
+    <div class="products-page-catogory-container">
+        <DisplayProducts />
+    </div>
 </template>
 
     
 <script>
-     import { ref } from 'vue'
-     
-     export default {
-       setup () {
-         return {
-           tab: ref('mails')
-         }
-       }
-     }
-     </script>
+import HomeGenderFilter from '../component/HomeGenderFilter.vue'
+
+    export default{
+        components: {
+            HomeGenderFilter,
+          
+
+            
+        },
+    }   
+ </script>
 
 
 <style>

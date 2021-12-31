@@ -4,7 +4,7 @@
      <div class="pages-container">
       <q-toolbar>
         <q-toolbar-title>
-         <img src="~assets/logo104909.png"  @click="$router.replace('/Home')">
+         <img src="https://res.cloudinary.com/ravikiran143/image/upload/v1640927365/logo104909_hid3fj_xhf2jl.png"  @click="$router.replace('/Home')">
         </q-toolbar-title>
        
         <q-tabs align="center" >
@@ -26,7 +26,7 @@
     </q-header>
 
     <q-page-container>
-         <transition name="router-anim" enter-active-class="animated fadeInDown" leave-active-class="fadeOutDown"> <router-view /></transition>
+         <transition name="router-anim" enter-active-class="animated fadeIn" leave-active-class="fadeOut"> <router-view /></transition>
         
     </q-page-container>
 
@@ -39,7 +39,7 @@
   @import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
   img{
    max-width:30%;
-   padding: 10px;
+   padding: 15px;
   }
 .pages-container{
 
